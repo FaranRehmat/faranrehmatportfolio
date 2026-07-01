@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Faran Rehmat - Game Developer, UI Designer & CS Student. Unreal Engine, C++, JavaScript. Based in Islamabad, Pakistan.">
+<meta name="keywords" content="Faran Rehmat, Game Developer, UI Designer, Unreal Engine, C++, Pakistan, Portfolio">
+<meta property="og:title" content="Faran Rehmat | Game Developer & UI Designer">
+<meta property="og:description" content="Game Developer & BS Computer Games Development Student at Air University">
+<title>Faran Rehmat | Game Developer &amp; UI Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Project screenshot">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="logo">FR<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#admin">Admin</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">◈ Available for collaboration · Islamabad, Pakistan</div>
+    <h1 class="hero-name">
+      <span class="first">Faran </span><span class="last">Rehmat</span>
+    </h1>
+    <div class="hero-typing" id="typing-text"><span id="typed"></span><span class="cursor-blink">|</span></div>
+    <p class="hero-sub">BS Computer Games Development student at Air University — crafting immersive game experiences, polished UI designs, and digital solutions with Unreal Engine, C++, and a relentless passion for creativity.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-avatar reveal">
+        <div class="avatar-frame">
+          <div class="avatar-bg">
+            <div class="avatar-placeholder">
+              <span class="avatar-initial">FR</span>
+              <span>FARAN REHMAT</span>
+            </div>
+          </div>
+          <div class="avatar-corner tl"></div>
+          <div class="avatar-corner tr"></div>
+          <div class="avatar-corner bl"></div>
+          <div class="avatar-corner br"></div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <div class="section-header" style="text-align:left;margin-bottom:2rem">
+          <span class="section-tag">// About Me</span>
+          <h2 class="section-title">Crafting <span class="accent">Worlds</span><br>One Line at a Time</h2>
+        </div>
+        <p>I'm a passionate game developer and UI designer currently pursuing my BS in Computer Games Development at Air University, Islamabad (2024–2028). I live at the intersection of creativity and code.</p>
+        <div class="education-info glass-card" style="padding:1.5rem;margin:2rem 0;">
+  <h3 style="font-family:'Orbitron',sans-serif;color:var(--neon);margin-bottom:1rem;letter-spacing:1px;">
+    Education
+  </h3>
+
+  <div style="margin-bottom:1.2rem;">
+    <strong>BS Computer Games Development</strong><br>
+    Air University, Islamabad<br>
+    2024 – Present<br>
+    Completed 4 Semesters
+  </div>
+
+  <div style="margin-bottom:1.2rem;">
+    <strong>FSc</strong><br>
+    Fazaia Inter College E-9, Islamabad
+  </div>
+
+  <div>
+    <strong>Matriculation</strong><br>
+    Fazaia Inter College E-9, Islamabad
+  </div>
+</div>
+        <p>My journey is fueled by a deep love for building interactive experiences — whether it's designing game UI systems, architecting game mechanics in Unreal Engine, or crafting clean visual designs for clients. I've worked on game UIs, promotional flyers, and web experiences.</p>
+        <div class="about-stats">
+          <div class="stat-box glass-card">
+            <span class="stat-num">2024</span>
+            <span class="stat-label">Started</span>
+          </div>
+          <div class="stat-box glass-card">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-box glass-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Ambition</span>
+          </div>
+        </div>
+        <div class="interests">
+          <span class="interest-tag">level Design</span>
+          <span class="interest-tag">UI Design</span>
+          <span class="interest-tag">Creative Storytelling</span>
+          <span class="interest-tag">Artificial Intelligence</span>
+          <span class="interest-tag">Modeling & Animation</span>
+          <span class="interest-tag">Tech Trends</span>
+          <span class="interest-tag">Animation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Capabilities</span>
+      <h2 class="section-title">My <span class="accent">Arsenal</span></h2>
+      <div class="section-line"></div>
+      <p class="section-desc">Tools and technologies I use to build exceptional experiences</p>
+    </div>
+    <div class="skills-grid">
+      <div class="glass-card skill-category reveal">
+        <div class="skill-cat-title">Game Development</div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Unreal Engine 5</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill ue" data-w="85%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">C++</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill cpp" data-w="78%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Blueprint Scripting</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill ue" data-w="80%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Game Design</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar"><div class="skill-fill cpp" data-w="72%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal">
+        <div class="skill-cat-title">Design & Web</div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">UI/UX Design</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill ux" data-w="80%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Graphic Design</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill dm" data-w="75%"><div class="skill-glow" style="background:var(--neon2)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill js" data-w="75%"><div class="skill-glow" style="background:#ffd700"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">HTML / CSS</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill js" data-w="80%"><div class="skill-glow" style="background:#ffd700"></div></div></div>
+        </div>
+      </div>
+      <div class="glass-card skill-category reveal">
+        <div class="skill-cat-title">Other Skills</div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Git & Version Control</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill git" data-w="70%"><div class="skill-glow" style="background:var(--neon3)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Digital Marketing</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill dm" data-w="65%"><div class="skill-glow" style="background:var(--neon2)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Problem Solving</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill ue" data-w="90%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Leadership</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill cpp" data-w="75%"><div class="skill-glow" style="background:var(--neon)"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Portfolio</span>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      <div class="section-line"></div>
+      <p class="section-desc">A showcase of my builds, designs, and creative endeavors</p>
+    </div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
+      <button class="filter-btn" onclick="filterProjects('game',this)">Game Dev</button>
+      <button class="filter-btn" onclick="filterProjects('web',this)">Web</button>
+
+    </div>
+    <div class="projects-grid" id="projects-grid">
+      <!-- injected by js/app.js -->
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Contact</span>
+      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+      <div class="section-line"></div>
+      <p class="section-desc">Have a project in mind? Want to collaborate? Drop me a line.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Get In Touch</h3>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. Whether you're a studio, startup, or fellow developer — let's talk.</p>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">✉</div>
+          <div class="contact-text">
+            <div class="label">Email</div>
+            <div class="value">faranrehmat1012@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <div class="label">Location</div>
+            <div class="value">Islamabad, Pakistan</div>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <div class="contact-icon">🎓</div>
+          <div class="contact-text">
+            <div class="label">University</div>
+            <div class="value">Air University (2024–2028)</div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/faran-rehmat-1060a4296" target="_blank" class="social-link" title="LinkedIn">in</a>
+          <a href="mailto:faranrehmat1012@gmail.com" class="social-link" title="Email">@</a>
+          <a href="https://github.com/faranrehmat242001-glitch" class="social-link" title="GitHub">gh</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="contact-form glass-card" style="padding:2rem" onsubmit="handleContact(event)" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input class="form-input" type="text" id="cName" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" id="cEmail" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input class="form-input" type="text" id="cSubject" placeholder="Project inquiry...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" id="cMessage" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message →</button>
+          <div class="form-msg" id="formMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMIN PANEL -->
+<section id="admin" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Admin</span>
+      <h2 class="section-title">Control <span class="accent">Panel</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="admin-wrapper glass-card" style="padding:2rem" id="adminWrapper">
+      <!-- Login Gate -->
+      <div id="adminLogin">
+        <div class="login-box">
+          <div class="login-title">[ SECURE ACCESS ]</div>
+          <p class="login-sub">Enter credentials to access admin dashboard</p>
+          <div class="form-group" style="margin-bottom:1rem">
+            <label class="form-label">Username</label>
+            <input class="form-input" type="text" id="adminUser" placeholder="admin">
+          </div>
+          <div class="form-group" style="margin-bottom:1.5rem">
+            <label class="form-label">Password</label>
+            <input class="form-input" type="password" id="adminPass" placeholder="••••••••">
+          </div>
+          <button class="submit-btn" style="width:100%" onclick="adminLogin()">LOGIN →</button>
+          <div class="form-msg" id="loginMsg"></div>
+        </div>
+      </div>
+      <!-- Dashboard -->
+      <div id="adminDash" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+          <span style="font-family:'Orbitron',sans-serif;color:var(--neon);font-size:0.8rem;letter-spacing:2px">● LOGGED IN AS ADMIN</span>
+          <button class="admin-btn danger" onclick="adminLogout()">LOGOUT</button>
+        </div>
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchTab('overview',this)">Overview</button>
+          <button class="admin-tab" onclick="switchTab('messages',this)">Messages</button>
+          <button class="admin-tab" onclick="switchTab('projects',this)">Projects</button>
+          <button class="admin-tab" onclick="switchTab('analytics',this)">Analytics</button>
+        </div>
+        <!-- Overview -->
+        <div class="admin-panel active" id="tab-overview">
+          <div class="dashboard-grid">
+            <div class="glass-card dash-card">
+              <div class="dash-num" id="visitorCount">—</div>
+              <div class="dash-label">Total Visitors</div>
+            </div>
+            <div class="glass-card dash-card">
+              <div class="dash-num" id="msgCount">—</div>
+              <div class="dash-label">Messages</div>
+            </div>
+            <div class="glass-card dash-card">
+              <div class="dash-num" id="projCount">—</div>
+              <div class="dash-label">Projects</div>
+            </div>
+          </div>
+          <div class="glass-card" style="padding:1.5rem">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.75rem;color:var(--neon);letter-spacing:2px;margin-bottom:1rem">RECENT ACTIVITY</div>
+            <div id="activityFeed" style="display:flex;flex-direction:column;gap:0.5rem"></div>
+          </div>
+        </div>
+        <!-- Messages -->
+        <div class="admin-panel" id="tab-messages">
+          <div class="messages-list" id="messagesList"></div>
+        </div>
+        <!-- Projects -->
+        <div class="admin-panel" id="tab-projects">
+          <div class="project-manager">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.8rem;color:var(--text);margin-bottom:1rem;letter-spacing:1px">ADD NEW PROJECT</div>
+            <div class="add-project-form">
+              <div class="form-group">
+                <label class="form-label">Title</label>
+                <input class="form-input" id="pTitle" placeholder="Project name">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <select class="form-input" id="pCat">
+                  <option value="design">Design</option>
+                  <option value="game">Game Dev</option>
+                  <option value="web">Web</option>
+                  <option value="tool">Tool</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Description</label>
+                <input class="form-input" id="pDesc" placeholder="Project description">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Tech Stack</label>
+                <input class="form-input" id="pStack" placeholder="C++, UE5, ...">
+              </div>
+              <div class="form-group">
+                <label class="form-label">GitHub URL</label>
+                <input class="form-input" id="pGithub" placeholder="https://github.com/...">
+              </div>
+            </div>
+            <button class="admin-btn" onclick="addAdminProject()">+ ADD PROJECT</button>
+            <div class="admin-project-list" id="adminProjectList"></div>
+          </div>
+        </div>
+        <!-- Analytics -->
+        <div class="admin-panel" id="tab-analytics">
+          <div class="dashboard-grid" style="margin-bottom:1.5rem">
+            <div class="glass-card dash-card">
+              <div class="dash-num" style="font-size:1.8rem;color:var(--neon2)" id="todayVisits">—</div>
+              <div class="dash-label">Today</div>
+            </div>
+            <div class="glass-card dash-card">
+              <div class="dash-num" style="font-size:1.8rem;color:var(--neon3)" id="weekVisits">—</div>
+              <div class="dash-label">This Week</div>
+            </div>
+            <div class="glass-card dash-card">
+              <div class="dash-num" style="font-size:1.8rem;color:var(--gold)" id="topCountry">PK</div>
+              <div class="dash-label">Top Country</div>
+            </div>
+          </div>
+          <div class="glass-card" style="padding:1.5rem">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.75rem;color:var(--neon);letter-spacing:2px;margin-bottom:1rem">7-DAY VISITOR TREND</div>
+            <div class="chart-bars" id="analyticsChart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">FARAN REHMAT</div>
+  <p>Game Developer &amp; UI Designer · Air University · Islamabad, Pakistan</p>
+  <p style="margin-top:0.5rem;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:rgba(100,116,139,0.5)">Built with passion · © 2024–2028</p>
+</footer>
+
+<!-- SCRIPTS — order matters: Three.js → data → background → app -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/background.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
