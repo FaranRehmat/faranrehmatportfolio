@@ -34,7 +34,7 @@ const defaultProjects = [
     github: 'https://github.com/faranrehmat242001-glitch/Dream-League-Soccer-Ui-clone.git',
     demo: 'http://drive.google.com/open?id=1Tu6OfnOPDeLbnJ3jVKuKu2KIk1l7sZaT&resourcekey=',
     images: [
-      'images/dream-league.png',
+      'images/dreamleague.png',
     ],
     featured: true
   },
